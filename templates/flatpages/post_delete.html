@@ -1,0 +1,14 @@
+{% extends 'flatpages/default.html' %}
+
+{% block content %}
+{% block body %}
+<h1>{{ page_title }}</h1>
+<hr>
+<form action="" method="post">
+    {% csrf_token %}
+    <p>Delete new with article"{{ object.title }}"?</p>
+    <input type="submit" value="Delete" class="btn btn-danger"/>
+    <a class="btn btn-secondary" role="button" href="{{ previous_page_url }}">Cancel</a>
+</form>
+{% endblock body %}
+{% endblock content %}

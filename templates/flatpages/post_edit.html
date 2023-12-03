@@ -1,0 +1,15 @@
+{% extends 'flatpages/default.html' %}
+
+
+{% block content %}
+<h1>{{ page_title }}</h1>
+{% block body %}
+
+<form action="" method="post" class="my-4">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Save" class="btn btn-primary"/>
+    <a class="btn btn-outline-danger" role="button" href="{{ request.path }}">Delete date</a>
+</form>
+{% endblock body %}
+{% endblock content %}
