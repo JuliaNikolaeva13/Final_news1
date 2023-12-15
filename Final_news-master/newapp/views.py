@@ -17,17 +17,14 @@ from django.views.decorators.csrf import csrf_protect
 from .models import Subscription, Category
 
 
+
+
 class Article(ListView):
     model = Post
     ordering = 'dateCreation'
     template_name = 'flatpages/main.html'
     context_object_name = 'news'
     paginate_by = 9
-
-    # def get_context_data(self, **kwargs):
-    #     context = super().get_context_data(**kwargs)
-    #     context['time_now'] = datetime.utcnow()
-    #     return context
 
     def get_queryset(self):
         queryset = super().get_queryset()
@@ -127,3 +124,11 @@ def subscriptions(request):
         'subscriptions.html',
         {'categories': categories_with_subscriptions},
     )
+
+
+# class IndexView(View):
+#     def get(self, request):
+#         post_created.delay()
+#         weekly_send_emails.delay(10)
+#         return HttpResponse('Hello!')
+

@@ -181,3 +181,24 @@ SERVER_EMAIL = "junnik13@yandex.ru"
 ADMINS = (
     ("julia", "junnik13@yandex.ru"),
 )
+
+#
+
+
+# CELERY_BROKER_URL = 'redis://default:imroCo9XUkNZBJ8FnAyVeWPXxvbCFnEc@redis-17537.c327.europe-west1-2.gce.cloud.redislabs.com:17537'
+# CELERY_RESULT_BACKEND = 'redis://default:imroCo9XUkNZBJ8FnAyVeWPXxvbCFnEc@redis-17537.c327.europe-west1-2.gce.cloud.redislabs.com:17537'
+# CELERY_ACCEPT_CONTENT = ['application/json']
+# CELERY_TASK_SERIALIZER = 'json'
+# CELERY_RESULT_SERIALIZER = 'json
+
+# CELERY_BROKER_URL = 'redis://default:MGszD2itdy4KBXYqyDUvdnVPiCTAZM31@redis-18024.c325.us-east-1-4.ec2.cloud.redislabs.com:18024'
+# CELERY_RESULT_BACKEND = 'redis://default:MGszD2itdy4KBXYqyDUvdnVPiCTAZM31@redis-18024.c325.us-east-1-4.ec2.cloud.redislabs.com:18024'
+# CELERY_ACCEPT_CONTENT = ['application/json']
+# CELERY_TASK_SERIALIZER = 'json'
+# CELERY_RESULT_SERIALIZER = 'json'
+
+CELERY_BROKER_URL = 'redis://localhost:6379'
+CELERY_RESULT_BACKEND = 'redis://localhost:6379'
+CELERY_ACCEPT_CONTENT = ['application/json']
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'
